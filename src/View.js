@@ -1,12 +1,13 @@
+import { Timer } from "./Timer.js";
+
 const View = {
-  render() {
-    return `
+  render({ minutes, seconds }) {
+    //renderizando o html dessa variável na div com id timer
+    const timer = (document.getElementById("timer").innerHTML = `
     <p>Próximo post em:</p>
-    <span>10:00</span>
-    `;
+    <span>${minutes}:${seconds}</span>
+    `);
   },
 };
-
-document.body.innerHTML = View.render;
 
 export { View };
