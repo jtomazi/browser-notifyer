@@ -29,7 +29,7 @@ const Timer = {
     const minutes = Timer.formatTime(Timer.timeToMinutes(Timer.currentTime));
     const seconds = Timer.formatTime(Timer.timeToSeconds(Timer.currentTime));
 
-    //Criando objeto e definindo os valores de minutos e tempo que serão exibidos/chamados no View.js
+    //Criando objeto e passando os valores de minutos e tempo que serão exibidos/chamados no View.js
     View.render({
       minutes,
       seconds,
