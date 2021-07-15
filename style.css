@@ -1,0 +1,25 @@
+/* retira a barra de rolagem da página, mantendo tudo no centro */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* altera a fonte de todos os elementos, e o tamanho*/
+:root {
+  font-family: "Inter", sans-serif;
+  font-size: 180%;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center; /* Alinha o texto horizontalmente */
+  justify-content: center; /* alinha o texto verticalmente */
+}
+
+/* tamanho da fonte do span (tempo)*/
+span {
+  font-size: 300%;
+}
