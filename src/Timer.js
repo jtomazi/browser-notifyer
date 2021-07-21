@@ -1,4 +1,5 @@
 import { View } from "./View.js";
+import { Emitter } from "./Emitter.js";
 
 const Timer = {
   time: 60 * 60,
@@ -16,6 +17,7 @@ const Timer = {
 
   //Passando o time definido em App.js, caso o App.time for vazio, usar o valor de Timer.time (60 minutos)
   init(time) {
+    Emitter.emit("countdown-start");
     Timer.time = time || Timer.time;
     Timer.currentTime = Timer.time;
     Timer.interval = setInterval(Timer.countdown, 1000);
@@ -38,6 +40,7 @@ const Timer = {
     // if para interromper a decrementação quando o currentTime for igual a 0
     if (Timer.currentTime === 0) {
       clearInterval(Timer.interval); //clearInterval interrompe o interval, é necessário passar a variável como parâmetro
+      Emitter.emit("countdown-end");
       return;
     }
   },
